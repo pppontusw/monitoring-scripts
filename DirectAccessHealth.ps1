@@ -9,7 +9,7 @@ foreach ($entry in $health) {
 	}
 }
 
-if (failures.length -gt 0) {
+if ($failures.length -gt 0) {
     write-host "2:$failures.Substring(0,$failures.length-1)"
 } else {
     write-host "0:OK"
