@@ -2,4 +2,12 @@ $DAServer = $args[0]
 
 $a = Get-RemoteAccessConnectionStatisticsSummary -ComputerName $DAServer
 
-write-host 0:$($a.TotalConnections)
+if ($a) {
+
+write-host "$($a.TotalConnections):OK"
+
+} else {
+
+write-host "-1:ERR"
+
+}
